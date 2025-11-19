@@ -1,3 +1,5 @@
+Grupo feito: Gabriel Campari, Gabriel Imolene, Glenda Borges, Gustavo Almeida, Kaue Barbi e Livia Mezashi.
+
 # 🤖 LLMAgent - Projeto de Agente de Linguagem com Gemma
 
 Este projeto implementa um Agente de Linguagem utilizando o modelo **Gemma-2b-it** da Google. O objetivo principal é carregar o modelo e criar um pipeline de geração de texto para tarefas de Inteligência Artificial.
