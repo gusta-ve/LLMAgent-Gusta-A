@@ -1,0 +1,59 @@
+# Arquivo .gitignore
+
+### Python ###
+# Arquivos de bytecode gerados
+__pycache__/
+*.py[cod]
+*$py.class
+# Logs de debug/etc
+*.log
+
+# Ambientes virtuais (Virtual Environments)
+# Ignora a pasta 'venv' que apareceu nas suas imagens
+venv/
+env/
+.venv/
+.python-version
+
+# Dependências
+# Instalações do Pip
+pip-wheel-metadata/
+.pip-install
+
+# Arquivos do Anaconda/Miniconda
+*.egg-info/
+.conda
+
+# Arquivos temporários do editor/IDE (ex: VS Code)
+.vscode/
+
+### Machine Learning/Modelos de IA ###
+
+# Pastas de cache e downloads do Hugging Face
+# É crucial ignorar estas pastas, pois elas podem ser muito grandes
+.cache/
+hf-cache/
+huggingface/
+.huggingface/
+
+# Checkpoints/Modelos grandes (se baixados)
+# Caso você salve checkpoints durante o treinamento
+checkpoints/
+*.pth
+*.pt
+*.safetensors
+*.bin
+*.model
+
+# Dados temporários ou grandes datasets
+data/
+datasets/
+# Use a linha abaixo se você tiver um arquivo zip muito grande
+*.zip
+*.tar.gz
+
+### Sistema Operacional ###
+# macOS
+.DS_Store
+# Windows
+Thumbs.db
