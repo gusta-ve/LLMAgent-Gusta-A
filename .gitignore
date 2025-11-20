@@ -5,55 +5,47 @@
 __pycache__/
 *.py[cod]
 *$py.class
-# Logs de debug/etc
 *.log
 
-# Ambientes virtuais (Virtual Environments)
-# Ignora a pasta 'venv' que apareceu nas suas imagens
+# Ambientes virtuais
 venv/
-env/
 .venv/
-.python-version
+env/
+python-version
 
-# Dependências
-# Instalações do Pip
+# Dependências internas
 pip-wheel-metadata/
-.pip-install
+pip-install/
 
-# Arquivos do Anaconda/Miniconda
+# Anaconda/Miniconda
+.conda/
 *.egg-info/
-.conda
 
-# Arquivos temporários do editor/IDE (ex: VS Code)
+# VS Code
 .vscode/
 
-### Machine Learning/Modelos de IA ###
-
-# Pastas de cache e downloads do Hugging Face
-# É crucial ignorar estas pastas, pois elas podem ser muito grandes
+### Hugging Face / Modelos de IA ###
+# Cache e downloads pesados dos modelos
 .cache/
-hf-cache/
 huggingface/
+huggingface_cache/
+hf-cache/
 .huggingface/
 
-# Checkpoints/Modelos grandes (se baixados)
-# Caso você salve checkpoints durante o treinamento
+# Checkpoints e arquivos grandes
 checkpoints/
-*.pth
-*.pt
-*.safetensors
 *.bin
+*.pt
+*.pth
+*.safetensors
 *.model
 
-# Dados temporários ou grandes datasets
+# Datasets
 data/
 datasets/
-# Use a linha abaixo se você tiver um arquivo zip muito grande
 *.zip
 *.tar.gz
 
-### Sistema Operacional ###
-# macOS
+# Sistema operacional
 .DS_Store
-# Windows
 Thumbs.db

@@ -1,47 +1,43 @@
-Grupo feito: Gabriel Campari, Gabriel Imolene, Glenda Borges, Gustavo Almeida, Kaue Barbi e Livia Mezashi.
+============================================================
+LLM Agent — Atividade #11
 
-# 🤖 LLMAgent - Projeto de Agente de Linguagem com Gemma
+Grupo:
+Gabriel Campari
+Gabriel Imolene
+Glenda Borges
+Gustavo Almeida
+Kaue Barbi
+Livia Mezashi
 
-Este projeto implementa um Agente de Linguagem utilizando o modelo **Gemma-2b-it** da Google. O objetivo principal é carregar o modelo e criar um pipeline de geração de texto para tarefas de Inteligência Artificial.
+Descrição:
+Este projeto implementa um LLM Agent utilizando o modelo google/gemma-2b-it através da biblioteca Transformers da Hugging Face.
+O objetivo é demonstrar o funcionamento básico de um agente que recebe um texto como entrada e gera uma resposta automática.
+O trabalho atende ao tema “LLM Agents” solicitado na Atividade #11 da disciplina de Inteligência Artificial.
 
-## 🚀 Começando
+Arquivos do Projeto:
+agent_app.py — Executa o agente no terminal
+agent_notebook.ipynb — Notebook com explicação e teste
+slides.pdf — Apresentação de 3 slides
+requirements.txt — Dependências
+.gitignore — Arquivos ignorados
 
-Siga estas instruções para configurar e rodar o projeto em sua máquina local.
+Como executar:
 
-### Pré-requisitos
+Criar ambiente virtual (opcional):
+python -m venv venv
+venv\Scripts\activate (Windows)
+source venv/bin/activate (Linux/macOS)
 
-Você precisará ter o Python instalado. É altamente recomendado o uso de um ambiente virtual (`venv`).
+Instalar dependências:
+pip install -r requirements.txt
 
-1.  **Crie e Ative o Ambiente Virtual:**
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # macOS/Linux
-    .\venv\Scripts\activate   # Windows
-    ```
-
-2.  **Instale as Dependências:**
-    *(Assumindo que você usa `transformers`, `torch` e `huggingface_hub`)*
-    ```bash
-    pip install transformers torch huggingface-hub
-    ```
-
-### 🔑 Autenticação no Hugging Face
-
-O modelo `google/gemma-2b-it` é um modelo de acesso restrito ("Gated Model"). Você deve estar autenticado no Hugging Face Hub para baixá-lo.
-
-1.  **Obtenha o Token:** Certifique-se de que você **aceitou os termos do modelo** na página do Hugging Face e **gerou um Token de Acesso** (com permissão de **Read**).
-2.  **Faça o Login:** Use a Command Line Interface (CLI) para autenticar seu ambiente:
-    ```bash
-    huggingface-cli login
-    # Cole o seu Token de Acesso quando solicitado.
-    ```
-    *(Você também pode usar o novo comando: `hf auth login`)*
-
-### ⚙️ Executando o Projeto
-
-O script principal é o `agent_app.py`.
-
-Para executar o agente e carregar o modelo:
-
-```bash
+Executar o agente:
 python agent_app.py
+
+Executar o notebook:
+Abrir o arquivo agent_notebook.ipynb e executar as células em ordem.
+
+Observação:
+Alguns modelos podem exigir autenticação no Hugging Face. Caso necessário:
+huggingface-cli login
+============================================================

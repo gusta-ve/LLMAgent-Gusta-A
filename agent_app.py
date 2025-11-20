@@ -2,13 +2,18 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
 MODEL_NAME = "google/gemma-2b-it"
 
-print("⏳ Carregando modelo leve...")
+print("Carregando modelo Gemma 2B...")
 
-tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+tokenizer = AutoTokenizer.from_pretrained(
+    MODEL_NAME,
+    trust_remote_code=True
+)
 
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_NAME,
-    device_map="cpu"
+    device_map="cpu",
+    torch_dtype="float32",
+    trust_remote_code=True
 )
 
 generator = pipeline(
@@ -27,5 +32,5 @@ if __name__ == "__main__":
     print("Digite sua pergunta:")
     user_input = input(">>> ")
 
-    print("\n🔹 Resposta do agente:\n")
+    print("\nResposta do agente:\n")
     print(agent(user_input))
